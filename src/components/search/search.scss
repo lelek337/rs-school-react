@@ -1,0 +1,23 @@
+.search {
+  margin: 0 auto;
+  width: 1100px;
+  height: 220px;
+  background-color: darkslategray;
+  display: grid;
+  align-items: center;
+  form {
+    display: grid;
+    .text-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text {
+      width: 350px;
+      height: 37px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
