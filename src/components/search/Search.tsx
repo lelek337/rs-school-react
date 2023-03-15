@@ -11,8 +11,10 @@ const Search = () => {
       <h3>Site Search</h3>
         <form>
           <div className="text-input">
-            <i><IoMdSearch/></i>
-            <input type="text" className='text'/>
+            <div className="input-text-icon">
+              <IoMdSearch/>
+              <input type="text" className='text'/>
+            </div>
             <button type="button">SEARCH</button>
           </div>
           <div className="radio-end-link">
