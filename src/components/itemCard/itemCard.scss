@@ -1,0 +1,27 @@
+.item-card {
+  width: 270px;
+  height: 400px;
+  display: grid;
+  i {
+    display: flex;
+    justify-content: flex-end;
+  }
+  h3 {
+    width: 230px;
+    height: 50px;
+  }
+  img {
+    width: 250px;
+    height: 190px;
+  }
+  button {
+    width: 60px;
+    height: 40px;
+    background-color: #1C62CD;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}

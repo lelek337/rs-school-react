@@ -1,0 +1,11 @@
+.header {
+  // width: 1280px;
+  background-color:darkslategray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50px;
+  button {
+    margin: auto 10px;
+  }
+}
