@@ -14,7 +14,6 @@ class Cards extends Component {
     const localStorageValue = localStorage.getItem('searchValue');
     const newCardsGoods = cardsGoods.filter(elem => elem.title.includes(localStorageValue!)
     )
-    console.log(newCardsGoods)
     const resCardsGoods = localStorageValue ? newCardsGoods : cardsGoods;
     this.setState((state) => ({goods: resCardsGoods}));
     return

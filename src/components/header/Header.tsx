@@ -6,7 +6,7 @@ import "./header.scss";
 
 class Header extends Component {
 
-  render() {
+  render(): React.ReactNode {
     return (
       <div className="header">
         <button type="button"><Link to={'/us'}>About Us</Link></button>
