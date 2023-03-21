@@ -3,7 +3,7 @@ export interface Icard {
   title: string;
   price: string;
   available: boolean;
-  img: string;
+  img?: string;
 }
 
 export interface IpropCard {

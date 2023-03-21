@@ -11,6 +11,7 @@ class Header extends Component {
       <div className="header">
         <button type="button"><Link to={'/us'}>About Us</Link></button>
         <button type="button"><Link to={'/'}>Main page</Link></button>
+        <button type="button"><Link to={'/add'}>Add Card</Link></button>
       </div>
     )
   }
