@@ -1,7 +1,7 @@
 
 export interface Icard {
   title: string;
-  price: string;
+  price: number;
   available: boolean;
   img?: string;
 }

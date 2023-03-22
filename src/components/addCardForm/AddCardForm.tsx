@@ -8,50 +8,46 @@ import { cardsGoods } from '../../constans/constans';
 class AddCardForm extends React.Component {
   state: Icard = {
     title: '',
-    price: '', 
-    available: false, 
+    price: 0, 
+    available: false 
   }
   onSubmit = (event: React.SyntheticEvent): void => {
     event.preventDefault();
     const target = event.target as typeof event.target & {
       title: {value: string},
       price: {value: string},
-      avialable: {value: boolean}
     };
-    const title = target.title.value;
-    const price = target.price.value;
-    const avialable = target.avialable.value;
-    console.log('avialable:', avialable)
+    const myTitle = target.title.value;
+    const myPrice = target.price.value;
     
-    this.setState(() => {
-      title: title;
-      price: price;
-      avialable: avialable;
-    })
-    
+    this.setState(() => ({
+        title: myTitle,
+        price: myPrice
+    }))
+  }
+  componentDidUpdate(): void {
+    if (this.state.price !== 0)
     cardsGoods.push(this.state)
-    console.log('cardsGoods:', cardsGoods, 'state:', this.state)
   }
   onChange = (event: any) => {
-    console.log(event.target.value)
+    this.setState(() => ({available: event.target.value ? false : true}))
   }
 
   render(): React.ReactNode {
     return (
-      <form className="add-card-form"
-        // ref={formRef} 
+      <form className="add-card-form" 
         onSubmit={this.onSubmit}>
         <h2>Add Card Form</h2>
         <input type="text" placeholder='title' name='title' />
         <input type="text" placeholder='price' name='price' />
         <input type="radio" 
           id='available' 
-          name='available'
-          // value='1'
-          checked={this.state.available === true? false: true} 
+          name='available' 
           onChange={this.onChange}/>
         <label htmlFor="available">available</label>
-        <button type='submit'>submit<Link to={'/'}/></button>
+        <button type='submit'>
+        <Link to={'/'}>submit</Link>
+        </button>
       </form>
     )
   }
