@@ -11,80 +11,103 @@ import { gidrotsikl1,
   gidrotsikl7, 
   gidrotsikl8, 
   gidrotsikl9 } from "../assets/jpg";
+  import {IstateForm} from '../types/interfaces';
+  import {errorText} from '../types/enums'
   
 
-export const formGoods: Icard[] = [];  
+export const formGoods: Icard[] = [];
+
+export const initialFormState: IstateForm = {
+    title: '',
+    price: '',
+    date: new Date, 
+    available: false,
+    img: '',
+    checkbox: {
+      backpack: false,
+      audioSystem: false,
+      vest: false
+    },
+      description: '',
+      titleDirty: false,
+      priceDirty: false,
+      descriptionDirty: false,
+      radioDirty: false,
+      errorTitle: errorText.title,
+      errorDescription: errorText.description,
+      errorPrice: errorText.price, 
+}
 
 export const cardsGoods: Icard[] = [
 {
   title: 'Gidrotsikl BRP SeaDoo GTI 130hp SE Black\Mango',
-  price: 1300,
+  price: '1300',
   available: false,
   img: gidrotsikl1
 },
 {
   title: 'Gidrotsikl BRP SeaDoo GTI 155hp SE Long Blue Metallic',
-  price: 1320,
+  price: '1320',
   available: false,
   img: gidrotsikl2
 },
 {
   title: 'Gidrotsikl BRP SeaDoo GTR 230hp X California green ',
-  price: 1400,
+  price: '1400',
   available: true,
   img: gidrotsikl3
 },
 {
   title: 'Gidrotsikl BRP SeaDoo GTR 230hp STD Black / Gulfstream',
-  price: 14702,
+  price: '1470',
   available: false,
   img: gidrotsikl4
 },
 {
   title: 'Gidrotsikl BRP SeaDoo GTX 300hp LTD Liquid Metal',
-  price: 1510,
+  price: '1510',
   available: false,
   img: gidrotsikl5
 },
 {
   title: 'Gidrotsikl Spark 2-UP 900 Ho Ace Chili Pepper',
-  price: 910,
+  price: '910',
   available: false,
   img: gidrotsikl6
 },
 {
   title: 'Gidrotsikl BRP SeaDoo Spark 60hp 2 up',
-  price: 900,
+  price: '900',
   available: false,
   img: gidrotsikl7
 },
 {
   title: 'Gidrotsikl BRP SeaDoo Spark GTS 90hp Rental',
-  price: 970,
+  price: '970',
   available: false,
   img: gidrotsikl8
 },
 {
   title: 'Gidrotsikl BRP SeaDoo WAKE 230hp PRO Teal blue',
-  price: 1120,
+  price: '1120',
   available: false,
   img: gidrotsikl9
 },
 {
   title: 'Gidrotsikl Spark 2-UP 900 Ho Ace Chili Pepper',
-  price: 830,
+  price: '830',
   available: false,
   img: gidrotsikl10
 },
 {
   title: 'Gidrotsikl Spark 2-UP 900 Ho Ace Pineapple',
-  price: 830,
+  price: '830',
   available: true,
   img: gidrotsikl11
 },
 {
   title: 'Gidrotsikl Spark 3-UP 900 HO Ace IBR Blueberry',
-  price: 830,
+  price: '830',
   available: false,
   img: gidrotsikl12
 },
