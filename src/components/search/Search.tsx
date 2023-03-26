@@ -36,7 +36,6 @@ class Search extends Component {
                 <label htmlFor="web">Search The Web</label>
               </div>
               <div className="link-button">
-                <a href="#"><IoMdSearch/></a>
                 <a href="#"><IoMdImages/></a>
                 <a href="#"><IoMdPaper/></a>
                 <a href="#"><IoMdFilm/></a>

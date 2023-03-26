@@ -1,6 +1,6 @@
 .item-card {
   width: 270px;
-  height: 400px;
+  height: 410px;
   display: grid;
   i {
     display: flex;
@@ -9,16 +9,30 @@
   h3 {
     width: 230px;
     height: 50px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  p {
+    margin: 0;
+    margin-top: -35px;
   }
   img {
     width: 250px;
     height: 190px;
   }
+  .item-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    img {
+      height: 0;
+    }
+  }
   button {
     width: 60px;
     height: 40px;
     background-color: #1C62CD;
-    margin-left: auto;
+    margin-left: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

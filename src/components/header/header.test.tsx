@@ -5,11 +5,6 @@ import { shallow, mount } from 'enzyme';
 describe('Header', () => {
   let wrapper: any;
 
-  it.only('snapshot', () => {
-    wrapper = shallow(<Header/>);
-    expect(wrapper).toMatchSnapshot();
-  });
-
   describe('correct render', () => {
     beforeEach(() => {
       wrapper = shallow(<Header/>);

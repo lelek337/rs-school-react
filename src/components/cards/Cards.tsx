@@ -1,29 +1,35 @@
-import React, { Component } from "react";
+import * as React from "react";
 import ItemCard from "../itemCard/ItemCard";
-import { cardsGoods } from "../../constans/constans";
-import { Icard } from "../../types/interfaces";
+import { Icard } from "types/interfaces";
+import { cardsGoods, formGoods } from '../../constans/constans';
 
 import './cards.scss';
 
-class Cards extends Component {
-  state = {
-    goods: []
-  };
+class Cards extends React.Component<{ data: string }, {goods: Icard[]}> {
+  constructor(props: { data: string }){
+    super(props);
+
+    this.state = {
+      goods: props.data === 'cards' ? cardsGoods : formGoods
+    }
+  }
 
   componentDidMount() {
     const localStorageValue = localStorage.getItem('searchValue');
-    const newCardsGoods = cardsGoods.filter(elem => elem.title.includes(localStorageValue!)
-    )
-    const resCardsGoods = localStorageValue ? newCardsGoods : cardsGoods;
-    this.setState((state) => ({goods: resCardsGoods}));
+    const {goods}  = this.state
+    if (localStorageValue) {
+      this.setState(() => ({goods: goods.filter(elem => elem.title.includes(localStorageValue!))})
+        )
+    }
     return
   }
   
   render() {
+    const {goods} = this.state
     return (
       <div className="cards">
         {
-          this.state.goods.map((el, i) => <ItemCard index={i} key={i} newCardsGoods={this.state.goods}/>)
+          goods.map((el, i) => <ItemCard index={i} key={i} newCardsGoods={goods}/>)
         }
         
       </div>
