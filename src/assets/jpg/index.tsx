@@ -14,4 +14,20 @@ import backpack from './backpack.jpg';
 import vest from './vest.jpg';
 import audioSystem from './audioSystem.jpg';
 
-export {gidrotsikl1, gidrotsikl2, gidrotsikl3, gidrotsikl4, gidrotsikl5, gidrotsikl6, gidrotsikl7, gidrotsikl8, gidrotsikl9, gidrotsikl10, gidrotsikl11, gidrotsikl12, backpack, vest, audioSystem};
+export {
+  gidrotsikl1,
+  gidrotsikl2,
+  gidrotsikl3,
+  gidrotsikl4,
+  gidrotsikl5,
+  gidrotsikl6,
+  gidrotsikl7,
+  gidrotsikl8,
+  gidrotsikl9,
+  gidrotsikl10,
+  gidrotsikl11,
+  gidrotsikl12,
+  backpack,
+  vest,
+  audioSystem,
+};
