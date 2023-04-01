@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AddCardForm from '../addCardForm/AddCardForm';
 
-class AddCard extends Component {
-  render(): React.ReactNode {
-    return <AddCardForm />;
-  }
+function AddCard() {
+  return <AddCardForm />;
 }
 
 export default AddCard;
