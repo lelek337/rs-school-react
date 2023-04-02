@@ -1,13 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { cardsGoods } from 'constans/constans';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { cardsGoods } from '../../constans/constans';
 import ItemCard from './ItemCard';
 
 describe('Correct render', () => {
-  let wrapper: any;
-
-  beforeEach(() => {
-    wrapper = shallow(<ItemCard newCardsGoods={cardsGoods} index={2} />);
+  const wrapper = render(<ItemCard newCardsGoods={cardsGoods} index={2} />);
+  it('render card', () => {
+    expect(screen.getByText('Gidrotsikl BRP SeaDoo GTR 230hp X California green'));
   });
 
   it('should render somthing', () => {

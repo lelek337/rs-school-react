@@ -56,7 +56,7 @@ export const cardsGoods: Icard[] = [
     id: '1',
   },
   {
-    title: 'Gidrotsikl BRP SeaDoo GTR 230hp X California green ',
+    title: 'Gidrotsikl BRP SeaDoo GTR 230hp X California green',
     price: '1400',
     available: true,
     img: gidrotsikl3,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { AboutUs, ErrorPage, MainPage, AddCard } from './components/pages';
-import Header from './components/header/Header';
+import { AboutUs, ErrorPage, MainPage, AddCard } from '../pages';
+import Header from '../header/Header';
 
 import './App.css';
 

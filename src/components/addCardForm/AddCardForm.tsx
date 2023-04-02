@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { IstateForm } from '../../types/interfaces';
 import * as er from '../../types/enums';
 import { formGoods, initialFormState } from '../../constans/constans';
 import Cards from '../cards/Cards';
