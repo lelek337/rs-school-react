@@ -6,14 +6,11 @@ import './header.scss';
 function Header() {
   return (
     <div className="header">
-      <button type="button">
+      <button type="button" className="ry-2 px-4 border bg-blue-400">
         <Link to="/us">About Us</Link>
       </button>
-      <button type="button">
+      <button type="button" className="ry-2 px-4 border bg-blue-300">
         <Link to="/">Main page</Link>
-      </button>
-      <button type="button">
-        <Link to="/add">Add Card</Link>
       </button>
     </div>
   );

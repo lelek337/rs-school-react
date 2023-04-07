@@ -6,7 +6,7 @@ function MainPage() {
   return (
     <>
       <Search />
-      <Cards data="cards" />
+      <Cards />
     </>
   );
 }

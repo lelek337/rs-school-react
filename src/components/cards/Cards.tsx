@@ -1,25 +1,35 @@
 import * as React from 'react';
+import axios from 'axios';
 import { Icard } from 'types/interfaces';
 import ItemCard from '../itemCard/ItemCard';
-import { cardsGoods, formGoods } from '../../constans/constans';
+import Spinner from '../spinner/Spinner';
 
 import './cards.scss';
 
-function Cards(props: { data: string }) {
-  const newProps: Icard[] = props.data === 'cards' ? cardsGoods : formGoods;
-  const [goods, setGoods] = React.useState(newProps);
+function Cards() {
+  const [products, setProducts] = React.useState<Icard[]>([]);
+  const [loading, setLoading] = React.useState(false);
 
-  const localStorageValue = localStorage.getItem('searchValue');
-  if (localStorageValue) {
-    setGoods(goods.filter((elem) => elem.title.includes(localStorageValue)));
+  async function fetchCards() {
+    setLoading(true);
+    const response = await axios.get<Icard[]>('https://fakestoreapi.com/products?limit=12');
+    setProducts(response.data);
+    setLoading(false);
   }
 
+  React.useEffect(() => {
+    fetchCards();
+  }, []);
+
   return (
-    <div className="cards">
-      {goods.map((el, i) => (
-        <ItemCard index={i} key={el.id} newCardsGoods={goods} />
-      ))}
-    </div>
+    <>
+      {loading ? <Spinner /> : null}
+      <div className="cards">
+        {products.map((el) => (
+          <ItemCard key={el.id} card={el} />
+        ))}
+      </div>
+    </>
   );
 }
 

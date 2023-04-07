@@ -1,16 +1,14 @@
 export interface Icard {
   title: string;
   price: string;
-  available: boolean;
-  img?: string;
-  date?: Date;
-  checkbox?: {
-    backpack: boolean;
-    vest: boolean;
-    audioSystem: boolean;
-  };
+  category: string;
+  image: string;
   description?: string;
   id: string;
+  raiting: {
+    rate: number;
+    count: number;
+  };
 }
 
 export interface IstateForm {
