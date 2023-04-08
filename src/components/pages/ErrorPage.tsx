@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img from './error.gif';
+import img from '../../assets/Error.gif';
 
 function ErrorPage() {
   return (
