@@ -5,7 +5,7 @@ export interface Icard {
   image: string;
   description?: string;
   id: string;
-  raiting: {
+  rating: {
     rate: number;
     count: number;
   };
