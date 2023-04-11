@@ -24,11 +24,11 @@ function Cards({ cardsGoods }: IcardProps) {
       setCard(specificCard);
     }
   };
-  console.log(cardsGoods)
+
   if (cardsGoods.length > 0) {
     setGoods(cardsGoods);
   }
-console.log(goods)
+
   const prodooctsCards = goods.length > 0 ? goods : products;
 
   const newProducts = prodooctsCards.filter((el, index) => (index < 12 ? el : null));
